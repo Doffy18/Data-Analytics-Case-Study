@@ -1,0 +1,20 @@
+= IFERROR(TEXT(B2, "hh:mm:ss AM/PM"), "") to get TIME SEPERATED FROM 04-12-2016 00:00 FORMAT AND TO GET 4-13-2016 12:00:00 AM FROM SAME 4-13-2016 12:00:00 AM
+ ITSELF. then do fix it by copy pasting.
+ 
+
+then we do this,to separate time from 4-13-2016 12:00:00 AM this.
+
+= IFERROR(TEXT( MOD( --SUBSTITUTE(C2,"-","/"), 1 ),"hh:mm:ss AM/PM" ),TRIM( RIGHT(A2, LEN(C2) - FIND(" ", C2))))
+
+
+
+to separate date and time and give only DATE in a mixed column which has values only consisting of date and also those values which has both date and time
+=IFERROR(
+    IF(ISNUMBER(B2), TEXT(INT(B2), "dd-mm-yyyy"), B2),
+    ""
+)
+
+OR DO TEXT TO CLMN
+
+to change a fixed time(12h) format which exel treats as text even though its in time format:
+=TEXT(VALUE(C2), "HH:MM:SS")

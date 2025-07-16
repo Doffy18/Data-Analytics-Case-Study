@@ -105,7 +105,7 @@ If implemented, these strategies can lead to:
 
 ## 👤 Author
 
-**KashiNath**  
+**Kashinath**  
 Aspired Data Scientist | Data Analytics | Machine Learning  
 
 
